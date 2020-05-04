@@ -14,6 +14,7 @@ export const Search = () => {
     e.preventDefault()
     if (query.length > 0) {
       dispatch(fetchBooks(`/books?title=${query}`))
+      dispatch(books.actions.setQuery(''))
     }
   }
 

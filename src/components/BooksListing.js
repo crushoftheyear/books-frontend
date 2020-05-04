@@ -11,7 +11,9 @@ const BookShelf = styled.section`
 
 const Book = styled.article`
   flex: 0 1 100%;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  padding: 0rem 1rem;
+  border: 1px solid #ccc;
 `
 
 export const BooksListing = () => {
