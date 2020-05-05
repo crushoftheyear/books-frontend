@@ -4,7 +4,9 @@ import { BooksListing } from './BooksListing'
 import { Search } from './Search'
 
 const Container = styled.div`
-  margin: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
 `
 
 export const Home = () => {
