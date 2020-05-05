@@ -12,8 +12,12 @@ const BookShelf = styled.section`
 const Book = styled.article`
   flex: 0 1 100%;
   margin-top: 1.5rem;
-  padding: 0rem 1rem;
+  padding: 0 1.5rem 1.5rem;
   border: 1px solid #ccc;
+`
+
+const Text = styled.p`
+  margin: 0;
 `
 
 export const BooksListing = () => {
@@ -28,12 +32,12 @@ export const BooksListing = () => {
     <BookShelf>
 
       {booksList.map((book) => (
-        <Book>
-          <Link>
+        <Book key={book.id}>
+          <Link to="">
             <h2>{book.title}</h2>
             <h3>{book.authors}</h3>
-            <p>{book.average_rating}</p>
-            <p>{book.num_pages}</p>
+            <Text>Rating: {book.average_rating}</Text>
+            <Text>Pages: {book.num_pages}</Text>
           </Link>
         </Book>
       ))}
